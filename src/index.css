@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(255, 223, 49, 0.25), transparent 28%),
+      radial-gradient(circle at 92% 5%, rgba(80, 213, 255, 0.28), transparent 28%),
+      radial-gradient(circle at 16% 92%, rgba(255, 92, 168, 0.16), transparent 30%),
+      linear-gradient(180deg, #f8fbff 0%, #fff9fc 48%, #f7fbff 100%);
+    min-height: 100vh;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
